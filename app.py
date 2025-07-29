@@ -55,7 +55,7 @@ async def query_data(
                 continue
         sql += " GROUP BY " + ", ".join(body.group_by)
     if body.limit:
-        sql += f" LIMIT {body.limit}"
+        sql = sql.replace("SELECT", f"SELECT TOP {body.limit}", 1)
     # Execute
     try:
         conn = get_db_conn()
