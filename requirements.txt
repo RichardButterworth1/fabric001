@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+msal
+pyodbc
+python-dotenv
+pydantic
