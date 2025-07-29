@@ -1,6 +1,6 @@
+pyodbc
+msal
 fastapi
 uvicorn
-msal
-pyodbc
-python-dotenv
 pydantic
+python-dotenv
