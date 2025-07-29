@@ -18,6 +18,7 @@ def read_root():
 ALLOWED_TABLES = {
     "leads": ["LeadID", "LeadName", "Status", "CreatedDate", "Owner"],
     "opportunities": ["OpportunityID", "Name", "Stage", "Status", "EstimatedValue", "EstimatedCloseDate", "Owner", "LastModifiedDate"],
+    "dbo.opportunities": ["OpportunityID", "Name", "Stage", "Status", "EstimatedValue", "EstimatedCloseDate", "Owner", "LastModifiedDate"],
     "opportunity_products": ["OpportunityProductID", "OpportunityID", "ProductName", "Quantity", "LineItemAmount"]
 }
 
