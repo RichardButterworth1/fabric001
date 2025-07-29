@@ -25,7 +25,7 @@ def check_api_key(request: Request):
 @app.post("/query", response_model=QueryResponse)
 async def query_data(
     body: QueryRequest,
-    request: Request = Depends(check_api_key)
+    _: None = Depends(check_api_key)
 ):
     # Table security
     if body.table not in ALLOWED_TABLES:
