@@ -32,7 +32,10 @@ async def query_data(
     _: None = Depends(check_api_key)
 ):
     # Table security
-    if body.table not in ALLOWED_TABLES:
+    table_name = body.table
+    if table_name.startswith("dbo."):
+        table_name = table_name[4:]  # remove 'dbo.' prefix
+    if table_name not in ALLOWED_TABLES:
         raise HTTPException(400, detail="Unknown or forbidden table")
     for field in body.fields:
         if field not in ALLOWED_TABLES[body.table]:
