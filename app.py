@@ -16,7 +16,7 @@ def read_root():
     return {"message": "Hello from Render!"}
 
 ALLOWED_TABLES = {
-    "dynamics_365__lead": ["dynamics_365__LeadID", "dynamics_365__LeadName", "dynamics_365__Status", "dynamics_365__CreatedDate", "dynamics_365__Owner"],
+    "dynamics_365__lead": ["_parentaccountid_value_microsoft_dynamics_crm_lookuplogicalname"],
     "dynamics_365__opportunity": ["dynamics_365__OpportunityID", "dynamics_365__Name", "dynamics_365__Stage", "dynamics_365__Status", "dynamics_365__EstimatedValue", "dynamics_365__EstimatedCloseDate", "dynamics_365__Owner", "dynamics_365__LastModifiedDate"],
     "dynamics_365__opportunityproduct": ["dynamics_365__OpportunityProductID", "dynamics_365__OpportunityID", "dynamics_365__ProductName", "dynamics_365__Quantity", "dynamics_365__LineItemAmount"]
 }
