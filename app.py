@@ -16,11 +16,9 @@ def read_root():
     return {"message": "Hello from Render!"}
 
 ALLOWED_TABLES = {
-    "leads": ["LeadID", "LeadName", "Status", "CreatedDate", "Owner"],
-    "opportunities": ["OpportunityID", "Name", "Stage", "Status", "EstimatedValue", "EstimatedCloseDate", "Owner", "LastModifiedDate"],
-    "dbo.opportunities": ["OpportunityID", "Name", "Stage", "Status", "EstimatedValue", "EstimatedCloseDate", "Owner", "LastModifiedDate"],
-    "opportunity_products": ["OpportunityProductID", "OpportunityID", "ProductName", "Quantity", "LineItemAmount"],
-    "INFORMATION_SCHEMA.TABLES": ["TABLE_SCHEMA", "TABLE_NAME"],
+    "dynamics_365__lead": ["LeadID", "LeadName", "Status", "CreatedDate", "Owner"],
+    "dynamics_365__opportunity": ["OpportunityID", "Name", "Stage", "Status", "EstimatedValue", "EstimatedCloseDate", "Owner", "LastModifiedDate"],
+    "dynamics_365__opportunityproduct": ["OpportunityProductID", "OpportunityID", "ProductName", "Quantity", "LineItemAmount"]
 }
 
 API_KEY = os.getenv("API_KEY")
