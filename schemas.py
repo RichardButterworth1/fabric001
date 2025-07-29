@@ -9,7 +9,7 @@ class QueryRequest(BaseModel):
     limit: Optional[int] = Field(20, description="Maximum rows to return, default 20.")
 
 class QueryResponse(BaseModel):
-    rows: List[Dict[str, str]]
+    rows: List[Dict[str, Any]]
     row_count: int
     fields: List[str]
     filter_used: Optional[Dict[str, str]]
