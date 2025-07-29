@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import Optional, List, Dict
+from typing import Optional, List, Dict, Any
 
 class QueryRequest(BaseModel):
     table: str = Field(..., description="The name of the table to query.")
