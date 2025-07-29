@@ -20,7 +20,7 @@ ALLOWED_TABLES = {
     "opportunities": ["OpportunityID", "Name", "Stage", "Status", "EstimatedValue", "EstimatedCloseDate", "Owner", "LastModifiedDate"],
     "dbo.opportunities": ["OpportunityID", "Name", "Stage", "Status", "EstimatedValue", "EstimatedCloseDate", "Owner", "LastModifiedDate"],
     "opportunity_products": ["OpportunityProductID", "OpportunityID", "ProductName", "Quantity", "LineItemAmount"],
-    "information_schema.tables": ["table_schema", "table_name"]
+    "INFORMATION_SCHEMA.TABLES": ["TABLE_SCHEMA", "TABLE_NAME"],
 }
 
 API_KEY = os.getenv("API_KEY")
