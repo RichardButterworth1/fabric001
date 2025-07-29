@@ -69,10 +69,10 @@ async def query_data(
         rows = [dict(zip(columns, r)) for r in cur.fetchall()]
         cur.close()
         conn.close()
-        except Exception as e:
-            import traceback
-            print(traceback.format_exc())  # Prints full error to logs
-            raise HTTPException(500, detail=str(e))  # Sends real error to client
+    except Exception as e:
+        import traceback
+        print(traceback.format_exc())  # Prints full error to logs
+        raise HTTPException(500, detail=str(e))  # Sends real error to client
     return QueryResponse(
         rows=rows, row_count=len(rows), fields=body.fields,
         filter_used=body.filters, group_by=body.group_by
