@@ -11,6 +11,10 @@ app = FastAPI(
     description="API for querying Microsoft Fabric CRM pipeline data. Used by GPT Action."
 )
 
+@app.get("/")
+def read_root():
+    return {"message": "Hello from Render!"}
+
 ALLOWED_TABLES = {
     "leads": ["LeadID", "LeadName", "Status", "CreatedDate", "Owner"],
     "opportunities": ["OpportunityID", "Name", "Stage", "Status", "EstimatedValue", "EstimatedCloseDate", "Owner", "LastModifiedDate"],
