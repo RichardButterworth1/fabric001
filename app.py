@@ -16,7 +16,7 @@ def read_root():
     return {"message": "Hello from Render!"}
 
 ALLOWED_TABLES = {
-    "dynamics_365__lead": ["leadid"],
+    "dynamics_365__lead": ["_accountid_value","_aug_meetingbookedstagecompletedby_value_microsoft_dynamics_crm_lookuplogicalname","_contactid_value","_createdby_value_microsoft_dynamics_crm_lookuplogicalname","_customerid_value_microsoft_dynamics_crm_lookuplogicalname","_ownerid_value_microsoft_dynamics_crm_lookuplogicalname","_owningbusinessunit_value_microsoft_dynamics_crm_lookuplogicalname","_owninguser_value_microsoft_dynamics_crm_lookuplogicalname","_parentaccountid_value_microsoft_dynamics_crm_lookuplogicalname","_parentcontactid_value_microsoft_dynamics_crm_lookuplogicalname","_qualifyingopportunityid_value_microsoft_dynamics_crm_lookuplogicalname","aug_company","aug_currentchallenges","aug_currentproductcompliansesetup","aug_leadsource","aug_leadsourcecw","aug_leadtype","aug_marketingcampaignsourcetype","aug_meetingbooked","aug_meetingbookedstagecompletedon","aug_meetingdate","aug_meetingfeedback","aug_meetingheld","aug_meetinghelddate","aug_meetingqualityscore","aug_mqltype","aug_mqltypes","aug_pipelinephase","aug_salesqualifieddate","budgetstatus","companyname","createdon","description","fullname","jobtitle","leadid","msdyncrm_leadid","salesstage","statecode","statuscode"],
     "dynamics_365__opportunity": ["opportunityid"],
     "dynamics_365__opportunityproduct": ["opportunityproductid"]
 }
